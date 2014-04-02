@@ -1,17 +1,17 @@
- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
         <title>Media Example</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
             playAudio("itsATrap.mp3");
@@ -54,7 +54,7 @@
         }
 
         // Pause audio
-        // 
+        //
         function pauseAudio() {
             if (my_media) {
                 my_media.pause();
@@ -62,7 +62,7 @@
         }
 
         // Stop audio
-        // 
+        //
         function stopAudio() {
             if (my_media) {
                 my_media.stop();
@@ -77,15 +77,15 @@
             console.log("playAudio():Audio Success");
         }
 
-        // onError Callback 
+        // onError Callback
         //
         function onError(error) {
-            alert('code: '    + error.code    + '\n' + 
+            alert('code: '    + error.code    + '\n' +
                   'message: ' + error.message + '\n');
         }
 
         // Set audio position
-        // 
+        //
         function setAudioPosition(position) {
             document.getElementById('audio_position').innerHTML = position;
         }
